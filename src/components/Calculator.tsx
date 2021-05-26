@@ -44,7 +44,6 @@ const Calculator: React.FC = () => {
         return Math.abs((fuelCostMap.get(speedArray[0]) || 0) - (fuelCostMap.get(speedArray[1]) || 0));
     }
 
-
     return <div className="row">
         <div className="col-xl-9 col-md-12 col-sm-12 row m-auto">
             <div className="col-xs-12 row m-auto">
@@ -64,6 +63,7 @@ const Calculator: React.FC = () => {
                                                                    type="number"
                                                                    defaultValue={travelDistance} max={2000}
                                                                    aria-label="Matka"
+                                                                   min="0"
                                                                    onChange={(event) => onChangeDistanceInput(event.target.value || "0")}/>
                         </div>
                     </div>
@@ -89,7 +89,6 @@ const Calculator: React.FC = () => {
             <Results savedTime={calculateSavedTime()} extraFuel={calculateExtraFuel()}/>
         </div>
     </div>
-
 }
 
 export default Calculator;

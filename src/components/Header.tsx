@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Header: React.FC = () => {
-    return <nav className="navbar navbar-expand-lg bg-primary text-white">
+    return <nav className="navbar navbar-expand-lg bg-primary text-white" style={{"minHeight":"50px"}}>
         <div className="container-fluid">
             <p className="navbar-brand mb-0 h1">GasTime</p>
         </div>
