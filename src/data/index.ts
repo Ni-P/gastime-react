@@ -2,6 +2,7 @@ import {Car} from "../models/car";
 
 export const fuelUsageCoefficient = 1.009;
 export const minSpeed = 10;
+export const maxDistance = 2000;
 
 export const cars: Array<Car> = [
     {name: "A", fuelConsumptionKm: 0.03},

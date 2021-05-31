@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Car} from "../models/car";
-import {cars, defaultSpeeds, speedIdArray} from "../data";
+import {cars, defaultSpeeds, maxDistance, speedIdArray} from "../data";
 import SpeedSelector from "./SpeedSelector";
 import {calculateFuelCost, calculateTravelTime} from "../application";
 import Results from "./Results";
@@ -25,7 +25,10 @@ const Calculator: React.FC = () => {
     }
 
     const onChangeDistanceInput = (value: string) => {
-        setTravelDistance(Number.parseInt(value));
+        let distance = Number.parseInt(value);
+        if (distance > maxDistance) setTravelDistance(maxDistance);
+        else if(distance < 0) setTravelDistance(0);
+        else setTravelDistance(distance);
     }
 
     useEffect(() => {
@@ -61,9 +64,10 @@ const Calculator: React.FC = () => {
                             (km)</label></div>
                         <div className="col-6 my-1 my-md-1"><input className="form-control w-100" id="input-distance"
                                                                    type="number"
-                                                                   defaultValue={travelDistance} max={2000}
+                                                                   defaultValue={travelDistance} max={maxDistance}
                                                                    aria-label="Matka"
-                                                                   min="0"
+                                                                   min={0}
+                                                                   value={travelDistance}
                                                                    onChange={(event) => onChangeDistanceInput(event.target.value || "0")}/>
                         </div>
                     </div>
