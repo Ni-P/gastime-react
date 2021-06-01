@@ -22,7 +22,7 @@ const Results: React.FC<IResultsProps> = ({savedTime, extraFuel}) => {
         </div>
         <div className="col-12 row justify-content-around">
             <div className="col-6 col-md-5 px-1 px-md-1">
-                <span className="fs-5 float-end">Ylimääräinen bensakulutus: </span>
+                <span className="fs-5 float-end">Bensakulutuksen ero:</span>
             </div>
             <div className="col-6 col-md-5 px-1 px-md-1">
                 <span className="fs-4 float-md-start float-none">{formatFuelCostString(extraFuel)} Litraa</span>

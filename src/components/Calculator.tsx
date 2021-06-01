@@ -64,7 +64,7 @@ const Calculator: React.FC = () => {
                             (km)</label></div>
                         <div className="col-6 my-1 my-md-1"><input className="form-control w-100" id="input-distance"
                                                                    type="number"
-                                                                   defaultValue={travelDistance} max={maxDistance}
+                                                                   max={maxDistance}
                                                                    aria-label="Matka"
                                                                    min={0}
                                                                    value={travelDistance}
