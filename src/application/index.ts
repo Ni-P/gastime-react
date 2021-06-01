@@ -6,7 +6,7 @@ export const calculateFuelCost = (fuelPerKm: number, speed: number, distance: nu
 
 export const formatFuelCostString = (cost: number) => {
     let costString = cost.toString();
-    return costString.length > 6 ? costString.slice(0, 5).padEnd(6, "0") : cost;
+    return costString.length > 6 ? costString.slice(0, 5).padEnd(5, "0") : cost;
 }
 
 export const calculateTravelTime = (distance: number, speed: number) => {
@@ -14,8 +14,7 @@ export const calculateTravelTime = (distance: number, speed: number) => {
 }
 
 export const formatTravelTimeToString = (time: number) => {
-    if (isNaN(time)) time = 0;
-    if(!isFinite(time)) time = 0;
+    if(isNaN(time) || !isFinite(time)) return "0 tuntia 0 minuuttia";
     let hours = Math.floor(time);
     let minutes = (time - hours) * 60;
     return `${hours} tuntia ${Math.round(minutes)} minuuttia`;
