@@ -1,3 +1,37 @@
+
+# Solidabiksen koodihaaste 2021
+
+Tämä on minun ratkaisu tähän koodihasteeseen. Ratkaisu on SPA, jossa valitaan yksi kolmesta tehtävän autosta sekä matkan pituus.
+Arviot matkan kestosta ja bensakulutuksesta saa kahdelle nopeudelle vetämällä nopeuksien slidereita. 
+Asetin etäisyyden maksimiksi 2000 km ja nopeuksille välin: 10-200 km/t, 10 km/t askeleella.
+Laskeminen tapahtuu heti kun jokin arvo muuttuu.
+
+Ratkaisu pyörii Herokussa: https://gastime.herokuapp.com/
+
+## Teknistä tietoa
+
+Käyttöliittymä on toteutettu käyttäen: React ja bootstrap.
+Ohjelmointikieli on Typescript. Kehitysympäristönä on Nodejs. Projektin perustana toimii Create React App.
+Sovelluksen saa toimimaan omalle koneelle komentorivi komennoilla:
+
+`git clone https://github.com/Ni-P/gastime-react.git <destination_folder>`
+
+`cd <destination_folder>`
+
+`npm install`
+
+`npm start` Käynnistää kehitys palvelimen. Lisäohjeita alempana.
+
+## Versio tietoa
+Nodejs v14.16.0
+
+React 17.0.2
+
+Bootstrap 5.0.1
+
+Typescript 4.2.4
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
